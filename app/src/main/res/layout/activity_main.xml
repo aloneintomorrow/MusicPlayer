@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.musicplayer.MainActivity"
+    android:background="@drawable/backgruond">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stop"
+        android:layout_alignTop="@+id/imageButtonPlay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:id="@+id/imageButtonStop" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/next"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/imageButtonNext"
+        android:layout_alignTop="@+id/imageButtonPlay"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/imageButtonPlay"
+        android:layout_marginRight="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imageButtonNext"
+        android:layout_toStartOf="@+id/imageButtonNext" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pre"
+        android:layout_alignTop="@+id/imageButtonPlay"
+        android:layout_toLeftOf="@+id/imageButtonPlay"
+        android:layout_toStartOf="@+id/imageButtonPlay"
+        android:layout_marginRight="40dp"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/imageButtonPre" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_above="@+id/seekBarSong"
+        android:layout_alignLeft="@+id/imageButtonStop"
+        android:layout_alignStart="@+id/imageButtonStop"
+        android:layout_marginBottom="13dp"
+        android:id="@+id/textViewTimeSong" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:layout_alignBaseline="@+id/textViewTimeSong"
+        android:layout_alignBottom="@+id/textViewTimeSong"
+        android:layout_alignRight="@+id/seekBarSong"
+        android:layout_alignEnd="@+id/seekBarSong"
+        android:id="@+id/textViewTotalSong" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarSong"
+        android:layout_above="@+id/imageButtonStop"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/compact_disc"
+        android:id="@+id/imageViewDisc"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/textviewTitle"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewTimeSong"
+        android:layout_toLeftOf="@+id/imageButtonPlay"
+        android:id="@+id/seekBarVolume"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ten bai hat"
+        android:textSize="24dp"
+        android:padding="10dp"
+        android:id="@+id/textviewTitle"
+        android:textColor="#fff"
+        android:textIsSelectable="false"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
